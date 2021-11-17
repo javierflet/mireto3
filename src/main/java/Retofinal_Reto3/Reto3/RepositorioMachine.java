@@ -15,24 +15,24 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public class RepositorioBike {
+public class RepositorioMachine {
     
     @Autowired
-    private InterfaceBike crud;
+    private InterfaceMachine crud;
 
-    public List<Bike> getAll(){
-        return (List<Bike>) crud.findAll();
+    public List<Machine> getAll(){
+        return (List<Machine>) crud.findAll();
     }
 
-    public Optional<Bike> getBike(int id){
+    public Optional<Machine> getMachine(int id){
         return crud.findById(id);
     }
 
-    public Bike save(Bike bike){
-        return crud.save(bike);
+    public Machine save(Machine machine){
+        return crud.save(machine);
     }
-    public void delete(Bike bike){
-        crud.delete(bike);
+    public void delete(Machine machine){
+        crud.delete(machine);
     }
     
 }

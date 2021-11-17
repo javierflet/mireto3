@@ -9,6 +9,6 @@ package Retofinal_Reto3.Reto3;
  * @author mac
  */
 import org.springframework.data.repository.CrudRepository;
-public interface InterfaceBike extends CrudRepository<Bike,Integer> {
+public interface InterfaceMachine extends CrudRepository<Machine,Integer> {
     
 } 

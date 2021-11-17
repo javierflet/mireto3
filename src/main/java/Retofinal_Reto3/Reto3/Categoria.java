@@ -47,12 +47,12 @@ public class Categoria implements Serializable {
         this.description = description;
     }
 
-    public List<Bike> getBikes() {
-        return bikes;
+    public List<Machine> getMachines() {
+        return machines;
     }
 
-    public void setBikes(List<Bike> bikes) {
-        this.bikes = bikes;
+    public void setMachines(List<Machine> machines) {
+        this.machines = machines;
     }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -62,6 +62,6 @@ public class Categoria implements Serializable {
     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="category")
     @JsonIgnoreProperties("category")
-    private List<Bike> bikes;
+    private List<Machine> machines;
 
 }

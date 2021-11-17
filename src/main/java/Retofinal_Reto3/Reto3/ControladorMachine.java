@@ -25,36 +25,36 @@ import org.springframework.web.bind.annotation.RestController;
  * @author mac
  */
 @RestController
-@RequestMapping("/api/Bike")
+@RequestMapping("/api/Machine")
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
-public class ControladorBike {
+public class ControladorMachine {
       @Autowired
-    private ServiciosBike servicio;
+    private ServiciosMachine servicio;
     @GetMapping("/all")
-    public List<Bike> getBikes(){
+    public List<Machine> getMachines(){
         return servicio.getAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Bike> getBike(@PathVariable("id") int bikeId) {
-        return servicio.getBike(bikeId);
+    public Optional<Machine> getMachine(@PathVariable("id") int machineId) {
+        return servicio.getMachine(machineId);
     }
 
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Bike save(@RequestBody Bike bike) {
-        return servicio.save(bike);
+    public Machine save(@RequestBody Machine machine) {
+        return servicio.save(machine);
     }
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public Bike update(@RequestBody Bike bike) {
-        return servicio.update(bike);
+    public Machine update(@RequestBody Machine machine) {
+        return servicio.update(machine);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int bikeId) {
-        return servicio.deleteBike(bikeId);
+    public boolean delete(@PathVariable("id") int machineId) {
+        return servicio.deleteMachine(machineId);
     }
     
 }

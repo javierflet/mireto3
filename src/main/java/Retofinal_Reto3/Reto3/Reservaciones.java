@@ -33,7 +33,7 @@ public class Reservaciones implements Serializable  {
     @ManyToOne
     @JoinColumn(name = "id")
     @JsonIgnoreProperties("reservations")
-    private Bike bike;
+    private Machine machine;
 
     public Integer getIdReservation() {
         return idReservation;
@@ -67,12 +67,12 @@ public class Reservaciones implements Serializable  {
         this.status = status;
     }
 
-    public Bike getBike() {
-        return bike;
+    public Machine getMachine() {
+        return machine;
     }
 
-    public void setBike(Bike bike) {
-        this.bike = bike;
+    public void setMachine(Machine machine) {
+        this.machine = machine;
     }
 
     public Cliente getClient() {
